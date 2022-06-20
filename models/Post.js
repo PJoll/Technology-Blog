@@ -22,7 +22,7 @@ Post.init(
         },
         post_content: {
             type: DataTypes.TEXT,
-            allowNull: false,
+            allowNull: true,
         },
         
         
@@ -33,6 +33,8 @@ Post.init(
                 key: 'id',
             }
         },
+    },
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,

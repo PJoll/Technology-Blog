@@ -47,6 +47,7 @@ router.get('/post/:id', async (req, res) => {
 
 router.get('/profile', withAuth, async (res, req) => {
     try {
+        console.log('we got this')
         const userData = await User.findByPk(res.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [{ model: Post }],

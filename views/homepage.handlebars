@@ -8,6 +8,13 @@
     </div>
     <div class="card-body">
         <p class="card-text">{{post.post_content}}</p>
-        
+        <div class="col text-center">
+            <button type="button" class="btn btn-secondary"><a href="/post/{{post.id}}">more</a></button>
+
+        </div>
+        <div class="card-content">{{format_date post.date_posted}}</div>
     </div>
 </div>
+
+
+{{/each}}
