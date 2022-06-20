@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Technology Blog</title>
-    <link rel="stylesheet" href="/Develop/public/css/jass.css">
-    <link rel="stylesheet" href="/Develop/public/css/style.css">
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -17,10 +17,10 @@
             </h1>
             <nav>
                 {{#if logged_in}}
-                <a href="/Develop/public/js/profile.js">profile</a>
+                <a href="/profile">profile</a>
                 <button class="no-button" id="logout">logout</button>
                 {{else}}
-                <a href="/Develop/public/js/login.js">login</a>
+                <a href="/login">login</a>
                 {{/if}}
             </nav>
         </header>
@@ -33,7 +33,7 @@
     </div>
 
     {{#if logged_in}}
-    <script src="/Develop/public/js/logout.js"></script>
+    <script src="/js/logout.js"></script>
     {{/if}}
 
 </body>
