@@ -36,6 +36,7 @@ router.get('/post/:id', async (req, res) => {
         });
 
         const post = postData.get({ plain: true });
+
         res.render('post', {
             ...post,
             logged_in: req.session.logged_in
@@ -45,10 +46,10 @@ router.get('/post/:id', async (req, res) => {
     }
 });
 
-router.get('/profile', withAuth, async (res, req) => {
+router.get('/profile',withAuth, async (req, res) => {
     try {
         console.log('we got this')
-        const userData = await User.findByPk(res.session.user_id, {
+        const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [{ model: Post }],
         });
@@ -75,8 +76,4 @@ router.get('/login', (req, res) => {
 
 
 module.exports = router;
-
-
-
-
 
