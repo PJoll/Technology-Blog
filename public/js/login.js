@@ -13,7 +13,7 @@ const loginFormHandler = async function(event) {
           method: 'POST' ,
             body: JSON.stringify({ 
               email,
-              password,
+              password
             }),
             headers: { 'Content-Type': 'application/json' },
           }
@@ -25,10 +25,10 @@ const loginFormHandler = async function(event) {
             document.location.replace('/profile');
           } else {
             alert(response.statusText);
-            alert('failed');  
+            alert('Login route has failed');  
           }
         }
-      };
+      }
       
       const signupFormHandler = async (event) => {
         event.preventDefault();
@@ -53,7 +53,7 @@ const loginFormHandler = async function(event) {
       };
       
       document
-        .querySelector('#login-form')
+        .querySelector('.login-form')
         .addEventListener('submit', loginFormHandler);
       
       document
