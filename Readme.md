@@ -21,3 +21,4 @@ The goal of the project is to create a CMS-style blog site where developers can 
 The following link is the deployed application on heroku with a screenshot of the page as well.
 
 
+https://technology-blog123.herokuapp.com
